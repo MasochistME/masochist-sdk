@@ -17,6 +17,14 @@
 <section class="tsd-panel tsd-comment">
 <div class="tsd-comment tsd-typography"><p>This is a type of a single object within the collection &quot;members&quot;.
 A single object describes a single member.</p>
+<p><strong>Important</strong>: there are several BREAKING changes here in comparison to the legacy Member format:</p>
+<ul>
+<li><code>id</code> → <strong>renamed</strong> to <code>steamID</code></li>
+<li><code>games</code> → <strong>removed</strong></li>
+<li><code>ranking</code> → <strong>removed</strong></li>
+<li><code>badges</code> → <strong>removed</strong></li>
+<li><code>url</code> → <strong>removed</strong> (can be constructed using member&#39;s Steam ID)</li>
+</ul>
 </div></section>
 <section class="tsd-panel tsd-hierarchy">
 <h4>Hierarchy</h4>
@@ -36,12 +44,10 @@ A single object describes a single member.</p>
 <a href="Members.Member.html#discordId" class="tsd-index-link tsd-kind-property tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>discord<wbr/>Id</span></a>
 <a href="Members.Member.html#description" class="tsd-index-link tsd-kind-property tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>description</span></a>
 <a href="Members.Member.html#avatar" class="tsd-index-link tsd-kind-property tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>avatar</span></a>
-<a href="Members.Member.html#url" class="tsd-index-link tsd-kind-property tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>url</span></a>
 <a href="Members.Member.html#lastUpdated" class="tsd-index-link tsd-kind-property tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>last<wbr/>Updated</span></a>
 <a href="Members.Member.html#isPrivate" class="tsd-index-link tsd-kind-property tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>is<wbr/>Private</span></a>
 <a href="Members.Member.html#isMember" class="tsd-index-link tsd-kind-property tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>is<wbr/>Member</span></a>
 <a href="Members.Member.html#isProtected" class="tsd-index-link tsd-kind-property tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>is<wbr/>Protected</span></a>
-<a href="Members.Member.html#ranking" class="tsd-index-link tsd-kind-property tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>ranking?</span></a>
 <a href="Members.Member.html#_id" class="tsd-index-link tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>_id</span></a>
 </div></section></div></details></section></section>
 <section class="tsd-panel-group tsd-member-group">
@@ -71,11 +77,6 @@ A single object describes a single member.</p>
 <div class="tsd-signature">avatar<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 <div class="tsd-comment tsd-typography"><p>Link to member&#39;s Steam avatar.</p>
 </div></section>
-<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"><a id="url" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><span>url</span><a href="#url" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-<div class="tsd-comment tsd-typography"><p>Link to member&#39;s Steam profile.</p>
-</div></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"><a id="lastUpdated" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>last<wbr/>Updated</span><a href="#lastUpdated" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">last<wbr/>Updated<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Date</span></div>
@@ -95,11 +96,6 @@ A single object describes a single member.</p>
 <h3 class="tsd-anchor-link"><span>is<wbr/>Protected</span><a href="#isProtected" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">is<wbr/>Protected<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 <div class="tsd-comment tsd-typography"><p>If the member is not currently a part of curator, this flag will protect them from being removed from website.</p>
-</div></section>
-<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"><a id="ranking" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>ranking</span><a href="#ranking" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">ranking<span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">any</span></div>
-<div class="tsd-comment tsd-typography"><p>How many games from every tier the member completed.</p>
 </div></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a id="_id" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>_id</span><a href="#_id" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
@@ -132,7 +128,8 @@ A single object describes a single member.</p>
 <li class="tsd-kind-module"><a href="../modules/Races.html">Races</a></li>
 <li class="tsd-kind-module"><a href="../modules/Seasons.html">Seasons</a></li>
 <li class="tsd-kind-module"><a href="../modules/Tiers.html">Tiers</a></li>
-<li class="tsd-kind-module"><a href="../modules/Errors.html">Errors</a></li></ul></li></ul></div></details></nav>
+<li class="tsd-kind-module"><a href="../modules/Errors.html">Errors</a></li>
+<li class="selected tsd-kind-module"><a href="../modules/Member.html">Member</a></li></ul></li></ul></div></details></nav>
 <nav class="tsd-navigation secondary menu-sticky">
 <ul>
 <li class="current tsd-kind-interface tsd-parent-kind-module"><a href="Members.Member.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-interface)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-256-path"></rect><path d="M9.51 16V15.016H11.298V8.224H9.51V7.24H14.19V8.224H12.402V15.016H14.19V16H9.51Z" fill="var(--color-text)" id="icon-256-text"></path></svg><span>Member</span></a>
@@ -142,12 +139,10 @@ A single object describes a single member.</p>
 <li class="tsd-kind-property tsd-parent-kind-interface"><a href="Members.Member.html#discordId" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>discord<wbr/>Id</a></li>
 <li class="tsd-kind-property tsd-parent-kind-interface"><a href="Members.Member.html#description" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>description</a></li>
 <li class="tsd-kind-property tsd-parent-kind-interface"><a href="Members.Member.html#avatar" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>avatar</a></li>
-<li class="tsd-kind-property tsd-parent-kind-interface"><a href="Members.Member.html#url" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>url</a></li>
 <li class="tsd-kind-property tsd-parent-kind-interface"><a href="Members.Member.html#lastUpdated" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>last<wbr/>Updated</a></li>
 <li class="tsd-kind-property tsd-parent-kind-interface"><a href="Members.Member.html#isPrivate" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>is<wbr/>Private</a></li>
 <li class="tsd-kind-property tsd-parent-kind-interface"><a href="Members.Member.html#isMember" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>is<wbr/>Member</a></li>
 <li class="tsd-kind-property tsd-parent-kind-interface"><a href="Members.Member.html#isProtected" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>is<wbr/>Protected</a></li>
-<li class="tsd-kind-property tsd-parent-kind-interface"><a href="Members.Member.html#ranking" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>ranking?</a></li>
 <li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="Members.Member.html#_id" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>_id</a></li></ul></li></ul></nav></div></div>
 <div class="container tsd-generator">
 <p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div>

@@ -17,6 +17,16 @@
 <section class="tsd-panel tsd-comment">
 <div class="tsd-comment tsd-typography"><p>This is a type of a single object within the collection &quot;games&quot;.
 A single object describes a single game.</p>
+<p><strong>Important</strong>: there are several BREAKING changes here in comparison to the legacy Game format:</p>
+<ul>
+<li><code>id</code> → <strong>type change</strong> → was <code>string</code>, is <code>number</code></li>
+<li><code>rating</code> → <strong>removed</strong></li>
+<li><code>img</code> → <strong>removed</strong> (can be constructed using just Steam ID in the following way: <code>https://cdn.akamai.steamstatic.com/steam/apps/${GAME_ID}/header.jpg</code>)</li>
+<li><code>achievements</code> → <strong>removed</strong></li>
+<li><code>achievementsTotal</code> → <strong>added</strong></li>
+<li><code>url</code> → <strong>removed</strong> (can be constructed using just Steam ID in the following way: <code>http://store.steampowered.com/api/appdetails?appids=${GAME_ID}</code>)</li>
+<li><code>sale</code> → <strong>removed</strong></li>
+</ul>
 </div></section>
 <section class="tsd-panel tsd-hierarchy">
 <h4>Hierarchy</h4>
@@ -34,11 +44,8 @@ A single object describes a single game.</p>
 <div class="tsd-index-list"><a href="Games.Game.html#id" class="tsd-index-link tsd-kind-property tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="#FF984D" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12" id="icon-1024-path"></rect><path d="M9.354 16V7.24H12.174C12.99 7.24 13.638 7.476 14.118 7.948C14.606 8.412 14.85 9.036 14.85 9.82C14.85 10.604 14.606 11.232 14.118 11.704C13.638 12.168 12.99 12.4 12.174 12.4H10.434V16H9.354ZM10.434 11.428H12.174C12.646 11.428 13.022 11.284 13.302 10.996C13.59 10.7 13.734 10.308 13.734 9.82C13.734 9.324 13.59 8.932 13.302 8.644C13.022 8.356 12.646 8.212 12.174 8.212H10.434V11.428Z" fill="var(--color-text)" id="icon-1024-text"></path></svg><span>id</span></a>
 <a href="Games.Game.html#title" class="tsd-index-link tsd-kind-property tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>title</span></a>
 <a href="Games.Game.html#description" class="tsd-index-link tsd-kind-property tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>description</span></a>
-<a href="Games.Game.html#rating" class="tsd-index-link tsd-kind-property tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>rating</span></a>
-<a href="Games.Game.html#img" class="tsd-index-link tsd-kind-property tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>img</span></a>
-<a href="Games.Game.html#url" class="tsd-index-link tsd-kind-property tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>url</span></a>
-<a href="Games.Game.html#achievements" class="tsd-index-link tsd-kind-property tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>achievements</span></a>
-<a href="Games.Game.html#sale" class="tsd-index-link tsd-kind-property tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>sale</span></a>
+<a href="Games.Game.html#tier" class="tsd-index-link tsd-kind-property tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>tier</span></a>
+<a href="Games.Game.html#achievementsTotal" class="tsd-index-link tsd-kind-property tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>achievements<wbr/>Total</span></a>
 <a href="Games.Game.html#isCurated" class="tsd-index-link tsd-kind-property tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>is<wbr/>Curated</span></a>
 <a href="Games.Game.html#isProtected" class="tsd-index-link tsd-kind-property tsd-parent-kind-interface"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>is<wbr/>Protected</span></a>
 <a href="Games.Game.html#_id" class="tsd-index-link tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>_id</span></a>
@@ -60,30 +67,15 @@ A single object describes a single game.</p>
 <div class="tsd-signature">description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 <div class="tsd-comment tsd-typography"><p>Description of the game.</p>
 </div></section>
-<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"><a id="rating" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><span>rating</span><a href="#rating" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">rating<span class="tsd-signature-symbol">:</span> <a href="../types/Tiers.TierId.html" class="tsd-signature-type" data-tsd-kind="Type alias">TierId</a></div>
+<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"><a id="tier" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>tier</span><a href="#tier" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature">tier<span class="tsd-signature-symbol">:</span> <a href="../types/Tiers.TierId.html" class="tsd-signature-type" data-tsd-kind="Type alias">TierId</a></div>
 <div class="tsd-comment tsd-typography"><p>ID of the tier that the game belongs to.</p>
 </div></section>
-<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"><a id="img" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><span>img</span><a href="#img" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">img<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-<div class="tsd-comment tsd-typography"><p>URL of the game&#39;s thumbnail.</p>
-</div></section>
-<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"><a id="url" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><span>url</span><a href="#url" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-<div class="tsd-comment tsd-typography"><p>URL to the game&#39;s Steam website.</p>
-</div></section>
-<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"><a id="achievements" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><span>achievements</span><a href="#achievements" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">achievements<span class="tsd-signature-symbol">:</span> <a href="../types/Games.GameAchievements.html" class="tsd-signature-type" data-tsd-kind="Type alias">GameAchievements</a></div>
-<div class="tsd-comment tsd-typography"><p>List of the game&#39;s achievements.</p>
-</div></section>
-<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"><a id="sale" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><span>sale</span><a href="#sale" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">sale<span class="tsd-signature-symbol">:</span> <a href="../types/Games.GameSale.html" class="tsd-signature-type" data-tsd-kind="Type alias">GameSale</a></div>
-<div class="tsd-comment tsd-typography"><p>Information about the game&#39;s current Steam sale.</p>
+<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"><a id="achievementsTotal" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>achievements<wbr/>Total</span><a href="#achievementsTotal" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature">achievements<wbr/>Total<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+<div class="tsd-comment tsd-typography"><p>Number of the achievements total that the game has.</p>
 </div></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"><a id="isCurated" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>is<wbr/>Curated</span><a href="#isCurated" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
@@ -126,7 +118,8 @@ A single object describes a single game.</p>
 <li class="tsd-kind-module"><a href="../modules/Races.html">Races</a></li>
 <li class="tsd-kind-module"><a href="../modules/Seasons.html">Seasons</a></li>
 <li class="tsd-kind-module"><a href="../modules/Tiers.html">Tiers</a></li>
-<li class="tsd-kind-module"><a href="../modules/Errors.html">Errors</a></li></ul></li></ul></div></details></nav>
+<li class="tsd-kind-module"><a href="../modules/Errors.html">Errors</a></li>
+<li class="tsd-kind-module"><a href="../modules/Member.html">Member</a></li></ul></li></ul></div></details></nav>
 <nav class="tsd-navigation secondary menu-sticky">
 <ul>
 <li class="current tsd-kind-interface tsd-parent-kind-module"><a href="Games.Game.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-interface)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-256-path"></rect><path d="M9.51 16V15.016H11.298V8.224H9.51V7.24H14.19V8.224H12.402V15.016H14.19V16H9.51Z" fill="var(--color-text)" id="icon-256-text"></path></svg><span>Game</span></a>
@@ -134,11 +127,8 @@ A single object describes a single game.</p>
 <li class="tsd-kind-property tsd-parent-kind-interface"><a href="Games.Game.html#id" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>id</a></li>
 <li class="tsd-kind-property tsd-parent-kind-interface"><a href="Games.Game.html#title" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>title</a></li>
 <li class="tsd-kind-property tsd-parent-kind-interface"><a href="Games.Game.html#description" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>description</a></li>
-<li class="tsd-kind-property tsd-parent-kind-interface"><a href="Games.Game.html#rating" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>rating</a></li>
-<li class="tsd-kind-property tsd-parent-kind-interface"><a href="Games.Game.html#img" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>img</a></li>
-<li class="tsd-kind-property tsd-parent-kind-interface"><a href="Games.Game.html#url" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>url</a></li>
-<li class="tsd-kind-property tsd-parent-kind-interface"><a href="Games.Game.html#achievements" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>achievements</a></li>
-<li class="tsd-kind-property tsd-parent-kind-interface"><a href="Games.Game.html#sale" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>sale</a></li>
+<li class="tsd-kind-property tsd-parent-kind-interface"><a href="Games.Game.html#tier" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>tier</a></li>
+<li class="tsd-kind-property tsd-parent-kind-interface"><a href="Games.Game.html#achievementsTotal" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>achievements<wbr/>Total</a></li>
 <li class="tsd-kind-property tsd-parent-kind-interface"><a href="Games.Game.html#isCurated" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>is<wbr/>Curated</a></li>
 <li class="tsd-kind-property tsd-parent-kind-interface"><a href="Games.Game.html#isProtected" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>is<wbr/>Protected</a></li>
 <li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="Games.Game.html#_id" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>_id</a></li></ul></li></ul></nav></div></div>
